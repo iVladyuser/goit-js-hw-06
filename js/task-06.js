@@ -7,8 +7,8 @@ function forClass(el, a, b) {
 	el.classList.remove(b);
 }
 
-function onInputBlur() {
-	if (validationInput.value.length === Number(validationInput.dataset.length)) {
+function onInputBlur(event) {
+	if (event.currentTarget.value.length === Number(validationInput.dataset.length)) {
 		forClass(validationInput, "valid", "invalid");
 	} else {
 		forClass(validationInput, "invalid", "valid");
