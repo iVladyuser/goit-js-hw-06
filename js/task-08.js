@@ -11,7 +11,7 @@ function onFormSubmit(event) {
 
 	const { email, password } = event.currentTarget.elements;
 
-	if (email.value.trim() === "" || password.value.trim() === "") {
+	if (!email.value.trim() || !password.value.trim()) {
 		alert("Будь ласка, заповніть поля форми!");
 	} else {
 		data.email = email.value;
